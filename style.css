@@ -78,7 +78,7 @@ header{
 }
 
 .header-content h1{
-    font-size: 7vmin;
+    font-size: 7vmin;   /* signifie que la taille de la police sera égale à 7% de la plus petite dimension de la fenêtre d'affichage. Cela permet de créer des tailles de police qui s'adaptent automatiquement à la taille de la fenêtre, offrant une mise en page responsive (adaptative). */
     margin-top: 50px;
     margin-bottom: 30px;
 }
@@ -99,8 +99,50 @@ header{
     display: none;
 }
 
+/* events */
+section{
+    width:80%;
+    margin: 80px auto;
+}
+
+.title{
+    text-align: center;
+    font-size: 4vmin;
+    color: darkblue;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;    
+}
+
+.row .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.events .row {
+    margin-top: 50px;
+}
+
+h4 {
+    font-size: 3vmin;
+    color: #484872;    
+    margin: 20px auto;
+}
+
+p {
+    color: #484872;
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 /* Mobile device */
-@media only screen and (max-width: 850px){
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+@media only screen and (max-width: 850px){    
     .menu-btn{
         display: block;
     }
@@ -115,7 +157,7 @@ header{
     .nav-links{
         flex-direction: column;        
         width: 100%;
-        height: 100vh;
+        height: 100vh;  /*(viewport height) signifie que la hauteur de l'élément sera égale à 100% de la hauteur totale de la fenêtre d'affichage. Cela permet de s'assurer que l'élément occupe toute la hauteur visible de la fenêtre, quelle que soit la taille de l'écran. */
         justify-content: center;
         background: #484872;        
         margin-top: -900px;
