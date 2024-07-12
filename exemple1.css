@@ -2,7 +2,7 @@
 
 body{
     background-color: blueviolet;
-    font-family: "roboto", "sans serif";    
+    font-family: "roboto", "sans serif";
 }
 
 .wrap{
@@ -14,7 +14,7 @@ body{
 .wrap > * {
     padding: 8px;
     margin: 8px;
-    flex: 1 100%;
+    flex: 1 100%;    
 }
 
 .header{height: 110px;background-color: chocolate;}
@@ -24,10 +24,25 @@ body{
 .footer {height: 100px;background: palevioletred;}
 
 
+
+/* 
+Lorsque la largeur de la fenêtre est d'au moins 600px, 
+les sections latérales (.side) prennent chacune la même proportion de l'espace disponible (flex: 1). 
+*/
 @media all and (min-width: 600px){
     .side {flex: 1;}
 }
 
+
+/*
+Lorsque la largeur de la fenêtre est d'au moins 800px, les règles suivantes s'appliquent :
+.main prend trois fois plus d'espace (flex: 3).
+L'ordre d'affichage change :
+.side-left vient en premier.
+.main vient en deuxième.
+.side-right vient en troisième.
+.footer vient en quatrième.
+*/
 @media all and (min-width: 800px){
 
     .main{flex: 3;}
